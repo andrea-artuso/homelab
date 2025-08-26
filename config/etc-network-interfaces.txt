@@ -9,6 +9,9 @@ iface eno2 inet manual
 
 auto eno3
 iface eno3 inet manual
+	address 10.60.0.1/24
+	mtu 9000
+#SAN interface
 
 auto eno4
 iface eno4 inet manual
