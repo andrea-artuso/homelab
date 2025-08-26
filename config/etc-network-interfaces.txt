@@ -9,7 +9,6 @@ iface eno2 inet manual
 
 auto eno3
 iface eno3 inet manual
-	address 10.60.0.1/24
 	mtu 9000
 #SAN interface
 
@@ -41,5 +40,14 @@ iface vmbr50 inet static
         bridge-ports bond0.50
         bridge-stp off
         bridge-fd 0
+
+auto vmbr60
+iface vmbr60 inet static
+	address 10.60.0.1/24
+	bridge-ports eno3
+	bridge-stp off
+	bridge-fd 0
+	mtu 9000
+#SAN bridge
 
 source /etc/network/interfaces.d/*
